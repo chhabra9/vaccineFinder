@@ -1,0 +1,18 @@
+<%-include("header.ejs")-%>
+<div class="cardContainer">
+   <center><img src="/img/letVaccinated.png" width="200px" alt=""></center> 
+   <%if(centers.length!=0){%>
+   <%for(var i=0;i<=centers.length-1;i++){%>
+    <div class="card"> 
+         <h2><b><%=centers[i].name%></b></h2>
+        <p> center address :<b><%=centers[i].address%></b></p>
+        <p> available dose :<b><%=centers[i].sessions[0].available_capacity%></b></p>
+        <p> available dose 1:<b><%=centers[i].sessions[0].available_capacity_dose1%></b></p>
+        <p> available dose 2:<b><%=centers[i].sessions[0].available_capacity_dose2%></b></p>
+    </div>
+    <%}%>
+    <%}else{%>
+        <h1>No centers are available</h1>
+        <%}%>
+</div>
+    <%-include("footer.ejs")-%>

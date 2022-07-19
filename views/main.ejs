@@ -1,0 +1,10 @@
+<%-include("header.ejs")-%>
+<div class="container">
+    <img src="/img/letVaccinated.png" width="200px" alt="">
+    <form action="/slotBypinId" method="post">
+    <button type="submit" name="buttonType" value="byPin">byPin</button>
+    <button type="submit" name="buttonType" value="bydistrict">bydistrict</button>
+</div>
+</form>
+<%-include("chatBot.ejs")-%>
+<%-include("footer.ejs")-%>
